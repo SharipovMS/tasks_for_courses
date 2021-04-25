@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43ae05c3-9700-4fb1-8aa5-c11726659f64" name="Default Changelist" comment="1 задание">
+    <list default="true" id="43ae05c3-9700-4fb1-8aa5-c11726659f64" name="Default Changelist" comment="1 задание (рефакторинг и добавление метод.)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task_Add_Group.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_Add_Group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619354963816</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1 задание (рефакторинг и добавление метод.)">
+      <created>1619360289319</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619360289319</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +166,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1 задание" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 задание" />
+    <MESSAGE value="1 задание (рефакторинг и добавление метод.)" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 задание (рефакторинг и добавление метод.)" />
   </component>
 </project>

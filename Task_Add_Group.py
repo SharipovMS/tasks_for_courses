@@ -16,10 +16,10 @@ class TaskAddGroup(unittest.TestCase):
     def test_task_add_group(self):
         wd = self.wd
         self.open_home_page(wd)
-        self.login(wd)
+        self.login(wd, username="admin", password="secret")
         # Отркытие страницы с группами
         self.open_group_page(wd)
-        self.filling_form_group(wd)
+        self.filling_form_group(wd, name="family", header="family", footer= "family")
         #закончили заполнение
         wd.find_element_by_link_text("group page").click()
         #Разлогинились
@@ -27,31 +27,59 @@ class TaskAddGroup(unittest.TestCase):
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys("admin")
 
+    def empty_value_test(self):
+         wd = self.wd
+        self.open_home_page(wd)
+        self.login(wd, username="admin", password="secret")
+        # Отркытие страницы с группами
+        self.open_group_page(wd)
+        self.filling_form_group(wd, name="", header="", footer="")
+        # закончили заполнение
+        wd.find_element_by_link_text("group page").click()
+        # Разлогинились
+        self.logout(wd)
+        wd.find_element_by_name("user").clear()
+        wd.find_element_by_name("user").send_keys("admin")
+
+        def test_task_add_group(self):
+            wd = self.wd
+            self.open_home_page(wd)
+            self.login(wd, username="admin", password="secret")
+            # Отркытие страницы с группами
+            self.open_group_page(wd)
+            self.filling_form_group(wd, name="family", header="family", footer="family")
+            # закончили заполнение
+            wd.find_element_by_link_text("group page").click()
+            # Разлогинились
+            self.logout(wd)
+            wd.find_element_by_name("user").clear()
+            wd.find_element_by_name("user").send_keys("admin")
+
     def logout(self, wd):
         wd.find_element_by_link_text("Logout").click()
 
-    def filling_form_group(self, wd):
+    def filling_form_group(self, wd, name, header, footer):
         wd.find_element_by_name("new").click()
         wd.find_element_by_name("group_name").click()
         # заполнение формы
         wd.find_element_by_name("group_name").clear()
-        wd.find_element_by_name("group_name").send_keys("family")
+        wd.find_element_by_name("group_name").send_keys(name)
         wd.find_element_by_name("group_header").clear()
-        wd.find_element_by_name("group_header").send_keys("family")
+        wd.find_element_by_name("group_header").send_keys(header)
         wd.find_element_by_name("group_footer").clear()
-        wd.find_element_by_name("group_footer").send_keys("family")
+        wd.find_element_by_name("group_footer").send_keys(footer)
         wd.find_element_by_name("submit").click()
 
     def open_group_page(self, wd):
         wd.find_element_by_link_text("groups").click()
 
-    def login(self, wd):
+    def login(self, wd, username, password):
         # Логаемся
         wd.find_element_by_name("user").click()
         wd.find_element_by_xpath("//input[@name='user']").clear()
-        wd.find_element_by_xpath("//input[@name='user']").send_keys("admin")
+        wd.find_element_by_xpath("//input[@name='user']").send_keys(username)
         wd.find_element_by_xpath("//input[@name='pass']").clear()
-        wd.find_element_by_xpath("//input[@name='pass']").send_keys("secret")
+        wd.find_element_by_xpath("//input[@name='pass']").send_keys(password)
         wd.find_element_by_xpath("//input[@value='Login']").click()
 
     def open_home_page(self, wd):
