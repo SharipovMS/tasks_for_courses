@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43ae05c3-9700-4fb1-8aa5-c11726659f64" name="Default Changelist" comment="1 задание (рефакторинг и добавление метод.)">
+    <list default="true" id="43ae05c3-9700-4fb1-8aa5-c11726659f64" name="Default Changelist" comment="1 задание (рефакторинг и добавление метод.)&#10;добавился второй тест (empty_value_test) с пустыми значениями.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task_Add_Group.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_Add_Group.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
@@ -31,7 +31,7 @@
       <recent name="C:\Users\admin\PycharmProjects\tasks_for_courses" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in Task_Add_Group.py">
+  <component name="RunManager" selected="Python tests.pytest for add_group_clean.AddGroupClean.test_add_group_clean.test_add_group_empty">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="tasks_for_courses" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,6 +96,54 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for Task_Add_Group.TaskAddGroup" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="tasks_for_courses" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Task_Add_Group.TaskAddGroup&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for add_group_clean.AddGroupClean" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="tasks_for_courses" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;add_group_clean.AddGroupClean&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for add_group_clean.AddGroupClean.test_add_group_clean.test_add_group_empty" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="tasks_for_courses" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;add_group_clean.AddGroupClean.test_add_group_clean.test_add_group_empty&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in bin" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="tasks_for_courses" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,9 +166,15 @@
       <item itemvalue="Python tests.Unittests in bin" />
       <item itemvalue="Python tests.Unittests for test_add_group.GroupAddTest.test_group_add" />
       <item itemvalue="Python tests.Unittests in Task_Add_Group.py" />
+      <item itemvalue="Python tests.pytest for Task_Add_Group.TaskAddGroup" />
+      <item itemvalue="Python tests.pytest for add_group_clean.AddGroupClean" />
+      <item itemvalue="Python tests.pytest for add_group_clean.AddGroupClean.test_add_group_clean.test_add_group_empty" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for add_group_clean.AddGroupClean.test_add_group_clean.test_add_group_empty" />
+        <item itemvalue="Python tests.pytest for add_group_clean.AddGroupClean" />
+        <item itemvalue="Python tests.pytest for Task_Add_Group.TaskAddGroup" />
         <item itemvalue="Python tests.Unittests in Task_Add_Group.py" />
         <item itemvalue="Python tests.Unittests for test_add_group.GroupAddTest.test_group_add" />
       </list>
@@ -149,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619360289319</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1 задание (рефакторинг и добавление метод.)&#10;добавился второй тест (empty_value_test) с пустыми значениями.">
+      <created>1619362623185</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619362623185</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,6 +228,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1 задание" />
     <MESSAGE value="1 задание (рефакторинг и добавление метод.)" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 задание (рефакторинг и добавление метод.)" />
+    <MESSAGE value="1 задание (рефакторинг и добавление метод.)&#10;добавился второй тест (empty_value_test) с пустыми значениями." />
+    <option name="LAST_COMMIT_MESSAGE" value="1 задание (рефакторинг и добавление метод.)&#10;добавился второй тест (empty_value_test) с пустыми значениями." />
   </component>
 </project>

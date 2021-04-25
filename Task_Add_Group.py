@@ -27,20 +27,6 @@ class TaskAddGroup(unittest.TestCase):
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys("admin")
 
-    def empty_value_test(self):
-         wd = self.wd
-        self.open_home_page(wd)
-        self.login(wd, username="admin", password="secret")
-        # Отркытие страницы с группами
-        self.open_group_page(wd)
-        self.filling_form_group(wd, name="", header="", footer="")
-        # закончили заполнение
-        wd.find_element_by_link_text("group page").click()
-        # Разлогинились
-        self.logout(wd)
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys("admin")
-
         def test_task_add_group(self):
             wd = self.wd
             self.open_home_page(wd)
@@ -55,8 +41,8 @@ class TaskAddGroup(unittest.TestCase):
             wd.find_element_by_name("user").clear()
             wd.find_element_by_name("user").send_keys("admin")
 
-    def logout(self, wd):
-        wd.find_element_by_link_text("Logout").click()
+        def logout(self, wd):
+            wd.find_element_by_link_text("Logout").click()
 
     def filling_form_group(self, wd, name, header, footer):
         wd.find_element_by_name("new").click()
