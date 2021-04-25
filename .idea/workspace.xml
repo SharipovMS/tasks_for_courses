@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43ae05c3-9700-4fb1-8aa5-c11726659f64" name="Default Changelist" comment="1 задание (рефакторинг и добавление метод.)&#10;добавился второй тест (add_group_clean) проверка с пустой формой (доработан напильником с отдельным вспомогательном классе)">
+    <list default="true" id="43ae05c3-9700-4fb1-8aa5-c11726659f64" name="Default Changelist" comment="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_contact_person.py" beforeDir="false" afterPath="$PROJECT_DIR$/add_contact_person.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +40,7 @@
       <recent name="C:\Users\admin\PycharmProjects\tasks_for_courses" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for add_group_clean.AddGroupClean.test_add_group_clean.test_add_group_empty">
+  <component name="RunManager" selected="Python tests.pytest for add_group_clean.AddGroupClean">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="tasks_for_courses" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,8 +181,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for add_group_clean.AddGroupClean.test_add_group_clean.test_add_group_empty" />
         <item itemvalue="Python tests.pytest for add_group_clean.AddGroupClean" />
+        <item itemvalue="Python tests.pytest for add_group_clean.AddGroupClean.test_add_group_clean.test_add_group_empty" />
         <item itemvalue="Python tests.pytest for Task_Add_Group.TaskAddGroup" />
         <item itemvalue="Python tests.Unittests in Task_Add_Group.py" />
         <item itemvalue="Python tests.Unittests for test_add_group.GroupAddTest.test_group_add" />
@@ -238,7 +240,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619378336822</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию">
+      <created>1619386189988</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619386189988</updated>
+    </task>
+    <task id="LOCAL-00008" summary="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию">
+      <created>1619386201034</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1619386201034</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,6 +275,7 @@
     <MESSAGE value="1 задание (рефакторинг и добавление метод.)&#10;добавился второй тест (empty_value_test) с пустыми значениями." />
     <MESSAGE value="1 задание (рефакторинг и добавление метод.)&#10;добавился второй тест (add_group_clean) проверка с пустой формой (работает)" />
     <MESSAGE value="1 задание (рефакторинг и добавление метод.)&#10;добавился второй тест (add_group_clean) проверка с пустой формой (доработан напильником с отдельным вспомогательном классе)" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 задание (рефакторинг и добавление метод.)&#10;добавился второй тест (add_group_clean) проверка с пустой формой (доработан напильником с отдельным вспомогательном классе)" />
+    <MESSAGE value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию" />
   </component>
 </project>

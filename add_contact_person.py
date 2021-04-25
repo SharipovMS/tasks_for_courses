@@ -15,15 +15,16 @@ class UntitledTestCase(unittest.TestCase):
 
     def test_untitled_test_case(self):
         wd = self.wd
-        #Открывает страницу
-        wd.get("https://localhost/addressbook/edit.php")
-        #Авторизация
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys("admin")
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys("secret")
-        wd.find_element_by_xpath("//input[@value='Login']").click()
-        #Заполнение формы адресной книги
+        self.open_page(wd)
+        self.auth_page(wd)
+        self.create_person_data(wd)
+        self.logout(wd)
+
+    def logout(self, wd):
+        wd.find_element_by_link_text("Logout").click()
+
+    def create_person_data(self, wd):
+        # Заполнение формы адресной книги
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys("Marat")
@@ -70,7 +71,18 @@ class UntitledTestCase(unittest.TestCase):
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys("Russia")
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
-        wd.find_element_by_link_text("Logout").click()
+
+    def auth_page(self, wd):
+        # Авторизация
+        wd.find_element_by_name("user").clear()
+        wd.find_element_by_name("user").send_keys("admin")
+        wd.find_element_by_name("pass").clear()
+        wd.find_element_by_name("pass").send_keys("secret")
+        wd.find_element_by_xpath("//input[@value='Login']").click()
+
+    def open_page(self, wd):
+        # Открывает страницу
+        wd.get("https://localhost/addressbook/edit.php")
 
     def is_element_present(self, how, what):
         try:
