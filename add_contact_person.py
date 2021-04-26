@@ -21,6 +21,17 @@ class UntitledTestCase(unittest.TestCase):
         self.create_person_data(wd, Task_three_class(firstname="Marat", second_name="Sharipov", lastname="Sericbaevich", nickname="murena", company="quality-lab", address="Moscow",
                                 mobile="+7 906 523 43 03", home="-", work="-", email="murenashark@mail.ru", fax="-", email2="-", homepage="-", email3="-", bday="15",
                                 bmonth="January", byear="1994", address2="Kostroma", dom="50", notes="Russia"))
+
+        self.logout(wd)
+
+    def test_untitled_test_null(self):
+        wd = self.wd
+        self.open_page(wd)
+        self.auth_page(wd)
+        self.create_person_data(wd, Task_three_class(firstname="", second_name="", lastname="", nickname="", company="", address="",
+                                mobile="", home="", work="", email="", fax="", email2="", homepage="", email3="", bday="",
+                                bmonth="-", byear="", address2="", dom="", notes=""))
+
         self.logout(wd)
 
     def logout(self, wd):
@@ -59,10 +70,10 @@ class UntitledTestCase(unittest.TestCase):
         wd.find_element_by_name("homepage").send_keys(task_three_class.homepage)
         wd.find_element_by_name("bday").click()
         Select(wd.find_element_by_name("bday")).select_by_visible_text(task_three_class.bday)
-        wd.find_element_by_xpath("//option[@value='15']").click()
+        #wd.find_element_by_xpath("//option[@value='15']").click()
         wd.find_element_by_name("bmonth").click()
         Select(wd.find_element_by_name("bmonth")).select_by_visible_text(task_three_class.bmonth)
-        wd.find_element_by_xpath("//option[@value='January']").click()
+        #wd.find_element_by_xpath("//option[@value='January']").click()
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").clear()
         wd.find_element_by_name("byear").send_keys(task_three_class.byear)
@@ -74,6 +85,7 @@ class UntitledTestCase(unittest.TestCase):
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(task_three_class.notes)
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+
 
     def auth_page(self, wd, login="admin", password="secret"):
         # Авторизация
