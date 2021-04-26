@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43ae05c3-9700-4fb1-8aa5-c11726659f64" name="Default Changelist" comment="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек.">
+    <list default="true" id="43ae05c3-9700-4fb1-8aa5-c11726659f64" name="Default Changelist" comment="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек.&#10;добавил параметры">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/add_contact_person.py" beforeDir="false" afterPath="$PROJECT_DIR$/add_contact_person.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619388055443</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек.&#10;добавил параметры">
+      <created>1619392147228</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1619392147228</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -282,6 +291,7 @@
     <MESSAGE value="1 задание (рефакторинг и добавление метод.)&#10;добавился второй тест (add_group_clean) проверка с пустой формой (доработан напильником с отдельным вспомогательном классе)" />
     <MESSAGE value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию" />
     <MESSAGE value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек." />
-    <option name="LAST_COMMIT_MESSAGE" value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек." />
+    <MESSAGE value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек.&#10;добавил параметры" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек.&#10;добавил параметры" />
   </component>
 </project>

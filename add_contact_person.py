@@ -17,20 +17,20 @@ class UntitledTestCase(unittest.TestCase):
         wd = self.wd
         self.open_page(wd)
         self.auth_page(wd)
-        self.create_person_data(wd)
+        self.create_person_data(wd, firstname="Marat", second_name="Sharipov", lastname="Sericbaevich", nickname="murena", company="quality-lab", address="Moscow",
+                                mobile="+7 906 523 43 03", home="-", work="-", email="murenashark@mail.ru", fax="-", email2="-", homepage="-", email3="-", bday="15",
+                                bmonth="January", byear="1994", address2="Kostroma", dom="50", notes="Russia")
         self.logout(wd)
 
     def logout(self, wd):
         wd.find_element_by_link_text("Logout").click()
 
-    def create_person_data(self, wd, name="Marat", second_name="Sharipov", lastname="Sericbaevich", nickname="murena",
-                           company="quality-lab", address="Moscow", home="-", mobile="+7 906 523 43 03", work="-",
-                           fax="-", email="murenashark@mail.ru", email2="-", email3="-", homepage="-", bday="15",
-                           bmonth="January", byear="1994", address2="Kostroma", home="50", notes="Russia"):
+    def create_person_data(self, wd, firstname, second_name, lastname, nickname, company, address, mobile, home, work,
+                           email, fax, email2, homepage, email3, bday, bmonth, byear, address2, dom, notes):
         # Заполнение формы адресной книги
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(name)
+        wd.find_element_by_name("firstname").send_keys(firstname)
         wd.find_element_by_name("middlename").clear()
         wd.find_element_by_name("middlename").send_keys(second_name)
         wd.find_element_by_name("lastname").clear()
@@ -70,7 +70,7 @@ class UntitledTestCase(unittest.TestCase):
         wd.find_element_by_name("address2").clear()
         wd.find_element_by_name("address2").send_keys(address2)
         wd.find_element_by_name("phone2").clear()
-        wd.find_element_by_name("phone2").send_keys(home)
+        wd.find_element_by_name("phone2").send_keys(dom)
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(notes)
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
