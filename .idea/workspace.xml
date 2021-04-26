@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43ae05c3-9700-4fb1-8aa5-c11726659f64" name="Default Changelist" comment="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек.&#10;добавил параметры">
+    <list default="true" id="43ae05c3-9700-4fb1-8aa5-c11726659f64" name="Default Changelist" comment="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек.&#10;добавил параметры&#10;выполнил рефракцию на create_person_data&#10;привел код к читательному виду&#10;тест отрабатывает за 12.94s">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/add_contact_person.py" beforeDir="false" afterPath="$PROJECT_DIR$/add_contact_person.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
@@ -40,7 +40,7 @@
       <recent name="C:\Users\admin\PycharmProjects\tasks_for_courses" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for add_group_clean.AddGroupClean">
+  <component name="RunManager" selected="Python tests.pytest in bin">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="tasks_for_courses" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -268,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619392147228</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек.&#10;добавил параметры&#10;выполнил рефракцию на create_person_data&#10;привел код к читательному виду&#10;тест отрабатывает за 12.94s">
+      <created>1619396012490</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1619396012490</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,6 +299,7 @@
     <MESSAGE value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию" />
     <MESSAGE value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек." />
     <MESSAGE value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек.&#10;добавил параметры" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек.&#10;добавил параметры" />
+    <MESSAGE value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек.&#10;добавил параметры&#10;выполнил рефракцию на create_person_data&#10;привел код к читательному виду&#10;тест отрабатывает за 12.94s" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 задание&#10;сформирован тест - адресной книги&#10;исправлена функция def SetUp(self) &#10;ипсправлен driver на wd&#10;добавлены комментарии к тестовому сценарию&#10;тест отрабатывает 15 сек.&#10;добавил параметры&#10;выполнил рефракцию на create_person_data&#10;привел код к читательному виду&#10;тест отрабатывает за 12.94s" />
   </component>
 </project>
