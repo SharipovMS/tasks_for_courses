@@ -16,23 +16,23 @@ class AddGroupClean(unittest.TestCase):
 
     def test_add_group_clean(self):
         wd = self.wd
-        self.login(wd)
+        self.open_home_page(wd)
         self.input_login(wd, username="admin", password="secret")
         self.click_login(wd)
         self.open_page_group(wd)
-        self.input_data_form(wd, Group(name="good", header="good", footer="good"))
+        self.create_group(wd, Group(name="good", header="good", footer="good"))
         self.check_page_group(wd)
         self.logout(wd)
 
     def test_add_group_empty(self):
-       wd = self.wd
-       self.login(wd)
-       self.input_login(wd, username="admin", password="secret")
-       self.click_login(wd)
-       self.open_page_group(wd)
-       self.input_data_form(wd, Group(name="", header="", footer=""))
-       self.check_page_group(wd)
-       self.logout(wd)
+        wd = self.wd
+        self.open_home_page(wd)
+        self.input_login(wd, username="admin", password="secret")
+        self.click_login(wd)
+        self.open_page_group(wd)
+        self.create_group(wd, Group(name="", header="", footer=""))
+        self.check_page_group(wd)
+        self.logout(wd)
 
     def logout(self, wd):
         # Выход
@@ -42,7 +42,7 @@ class AddGroupClean(unittest.TestCase):
         # Проверка страницы группы
         wd.find_element_by_link_text("groups").click()
 
-    def input_data_form(self, wd, group):
+    def create_group(self, wd, group):
         # Ввод данных в форму
         wd.find_element_by_name("new").click()
         wd.find_element_by_name("group_name").click()
@@ -70,7 +70,7 @@ class AddGroupClean(unittest.TestCase):
         wd.find_element_by_xpath("//input[@name='pass']").clear()
         wd.find_element_by_xpath("//input[@name='pass']").send_keys(password)
 
-    def login(self, wd):
+    def open_home_page(self, wd):
         # открытие главной страницы
         wd.get("https://localhost/addressbook/")
 
