@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
@@ -9,35 +7,35 @@ from test_create_contact_class import class_for_test_create_contact
 import unittest, time, re
 
 
-class UntitledTestCase(unittest.TestCase):
+class AddContact(unittest.TestCase):
     def setUp(self):
         self.wd = webdriver.Firefox()
         self.wd.implicitly_wait(30)
 
-    def test_untitled_test_case(self):
+    def add_create_contact(self):
         wd = self.wd
         self.open_page_add_new(wd)
-        self.auth_page_addressbook(wd)
-        self.create_person_data(wd, class_for_test_create_contact(firstname="Marat", second_name="Sharipov", lastname="Sericbaevich", nickname="murena", company="quality-lab", address="Moscow",
-                                mobile="+7 906 523 43 03", home="-", work="-", email="murenashark@mail.ru", fax="-", email2="-", homepage="-", email3="-", bday="15",
-                                bmonth="January", byear="1994", address2="Kostroma", dom="50", notes="Russia"))
+        self.login(wd)
+        self.create_contact(wd, class_for_test_create_contact(firstname="Marat", second_name="Sharipov", lastname="Sericbaevich", nickname="murena", company="quality-lab", address="Moscow",
+                                                              mobile="+7 906 523 43 03", home="-", work="-", email="murenashark@mail.ru", fax="-", email2="-", homepage="-", email3="-", bday="15",
+                                                              bmonth="January", byear="1994", address2="Kostroma", dom="50", notes="Russia"))
 
         self.logout(wd)
 
-    def test_untitled_test_null(self):
+    def add_create_contact_empty(self):
         wd = self.wd
         self.open_page_add_new(wd)
-        self.auth_page_addressbook(wd)
-        self.create_person_data(wd, class_for_test_create_contact(firstname="", second_name="", lastname="", nickname="", company="", address="",
-                                mobile="", home="", work="", email="", fax="", email2="", homepage="", email3="", bday="",
-                                bmonth="-", byear="", address2="", dom="", notes=""))
+        self.login(wd)
+        self.create_contact(wd, class_for_test_create_contact(firstname="", second_name="", lastname="", nickname="", company="", address="",
+                                                              mobile="", home="", work="", email="", fax="", email2="", homepage="", email3="", bday="",
+                                                              bmonth="-", byear="", address2="", dom="", notes=""))
 
         self.logout(wd)
 
     def logout(self, wd):
         wd.find_element_by_link_text("Logout").click()
 
-    def create_person_data(self, wd, test_create_contact_class):
+    def create_contact(self, wd, test_create_contact_class):
         # Заполнение формы адресной книги
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
@@ -87,7 +85,7 @@ class UntitledTestCase(unittest.TestCase):
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
 
 
-    def auth_page_addressbook(self, wd, login="admin", password="secret"):
+    def login(self, wd, login="admin", password="secret"):
         # Авторизация
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys(login)
