@@ -14,7 +14,7 @@ class AddContact(unittest.TestCase):
 
     def add_create_contact(self):
         wd = self.wd
-        self.open_page_add_new(wd)
+
         self.login(wd)
         self.create_contact(wd, class_for_test_create_contact(firstname="Marat", second_name="Sharipov", lastname="Sericbaevich", nickname="murena", company="quality-lab", address="Moscow",
                                                               mobile="+7 906 523 43 03", home="-", work="-", email="murenashark@mail.ru", fax="-", email2="-", homepage="-", email3="-", bday="15",
@@ -24,7 +24,7 @@ class AddContact(unittest.TestCase):
 
     def add_create_contact_empty(self):
         wd = self.wd
-        self.open_page_add_new(wd)
+
         self.login(wd)
         self.create_contact(wd, class_for_test_create_contact(firstname="", second_name="", lastname="", nickname="", company="", address="",
                                                               mobile="", home="", work="", email="", fax="", email2="", homepage="", email3="", bday="",
@@ -87,6 +87,7 @@ class AddContact(unittest.TestCase):
 
     def login(self, wd, login="admin", password="secret"):
         # Авторизация
+        self.open_page_add_new(wd) #вынесен в функцию чтобы страница открывалась в авторизации.
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys(login)
         wd.find_element_by_name("pass").clear()
