@@ -1,4 +1,3 @@
-___author___ = 'Marat Sharipov'
 
 class Group:
 
