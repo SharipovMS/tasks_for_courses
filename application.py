@@ -1,5 +1,5 @@
-from selenium.webdriver.android import webdriver
-from selenium.webdriver.firefox.webdriver import WebDriver
+from selenium import webdriver
+from selenium.webdriver.support.select import Select
 
 class Application:
     def __init__(self): #Запуск браузера
