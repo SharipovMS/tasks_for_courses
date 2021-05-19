@@ -1,11 +1,11 @@
 from selenium.webdriver.support.select import Select
 
-class GroupHelper:
+class ContactHelper:
 
     def __init__(self, app):
         self.app = app
 
-    def create_contact(self, test_create_contact_class):
+    def create(self, test_create_contact_class):
         # Заполнение формы адресной книги
         wd = self.app.wd
         wd.find_element_by_name("firstname").click()
