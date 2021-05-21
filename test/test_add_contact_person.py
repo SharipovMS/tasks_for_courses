@@ -1,14 +1,5 @@
 # -*- coding: utf-8 -*-
-import pytest
 from model.test_create_contact_class import class_for_test_create_contact
-from fixture.application import Application
-
-
-@pytest.fixture
-def app(request):
-    fixture = Application() #инициализация фикстуры
-    request.addfinalizer(fixture.destroy) #как разрушается фикстура
-    return fixture
 
 def test_add_create_contact(app): #тестовый метод
     app.session.login()
