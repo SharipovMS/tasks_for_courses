@@ -6,7 +6,7 @@ class SessionHelper:
     def login(self, login="admin", password="secret"):
         # Авторизация
         wd = self.app.wd
-        self.app.open_page_add_new() #вынесен в функцию чтобы страница открывалась в авторизации.
+        self.app.open_page() #вынесен в функцию чтобы страница открывалась в авторизации.
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys(login)
         wd.find_element_by_name("pass").clear()

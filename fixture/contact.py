@@ -5,9 +5,20 @@ class ContactHelper:
     def __init__(self, app):
         self.app = app
 
+    def open_home_page(self):
+        # открытие главной страницы
+        wd = self.app.wd
+        wd.get("https://localhost/addressbook/")
+
+    def open_cont_page(self):
+        # открытие главной страницы
+        wd = self.app.wd
+        wd.get("https://localhost/addressbook/edit.php")
+
     def create(self, test_create_contact_class):
         # Заполнение формы адресной книги
         wd = self.app.wd
+        self.open_cont_page()
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys(test_create_contact_class.firstname)
@@ -40,7 +51,6 @@ class ContactHelper:
         wd.find_element_by_name("bday").click()
         Select(wd.find_element_by_name("bday")).select_by_visible_text(test_create_contact_class.bday)
         #wd.find_element_by_xpath("//option[@value='15']").click()
-        wd.find_element_by_name("bmonth").click()
         Select(wd.find_element_by_name("bmonth")).select_by_visible_text(test_create_contact_class.bmonth)
         #wd.find_element_by_xpath("//option[@value='January']").click()
         wd.find_element_by_name("byear").click()
@@ -54,3 +64,16 @@ class ContactHelper:
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(test_create_contact_class.notes)
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+
+    def delete(self):
+        wd = self.app.wd
+        self.open_home_page()
+        wd.find_element_by_name("selected[]").click()
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        wd.switch_to_alert().accept()
+
+    def modify(self, test_create_contact_class):
+        wd = self.app.wd
+        wd.find_element_by_name("selected[]").click()
+        wd.find_element_by_xpath("(//img[@alt='Edit'])[1]").click()
+        wd.find_element_by_name("update").click()

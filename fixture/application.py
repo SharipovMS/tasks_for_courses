@@ -16,5 +16,10 @@ class Application:
         wd = self.wd
         wd.get("https://localhost/addressbook/edit.php")
 
+    def open_page(self):
+        # Открывает страницу
+        wd = self.wd
+        wd.get("http://localhost/addressbook/")
+
     def destroy(self):
         self.wd.quit()
