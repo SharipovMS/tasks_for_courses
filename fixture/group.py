@@ -70,3 +70,4 @@ class GroupHelper:
         wd.find_element_by_name("selected[]").click()
         #удалить группу
         wd.find_element_by_name("delete").click()
+        self.check_page_group()
