@@ -18,7 +18,7 @@ class ContactHelper:
     def create(self, test_create_contact_class):
         # Заполнение формы адресной книги
         wd = self.app.wd
-        self.open_cont_page()
+        self.open_home_page()
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys(test_create_contact_class.firstname)
@@ -67,7 +67,6 @@ class ContactHelper:
 
     def delete_first_contact(self):
         wd = self.app.wd
-        self.open_cont_page()
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
