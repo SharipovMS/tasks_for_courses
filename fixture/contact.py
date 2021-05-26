@@ -8,12 +8,12 @@ class ContactHelper:
     def open_home_page(self):
         # открытие главной страницы
         wd = self.app.wd
-        wd.get("https://localhost/addressbook/")
+        wd.find_element_by_link_text("add new").click()
 
     def open_cont_page(self):
         # открытие главной страницы
         wd = self.app.wd
-        wd.get("https://localhost/addressbook/edit.php")
+        wd.get("https://localhost/addressbook/")
 
     def create(self, test_create_contact_class):
         # Заполнение формы адресной книги
@@ -67,14 +67,13 @@ class ContactHelper:
 
     def delete_first_contact(self):
         wd = self.app.wd
-        self.open_home_page()
+        self.open_cont_page()
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
 
     def modify_first_contact(self, test_create_contact_class):
         wd = self.app.wd
-        self.open_home_page()
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("(//img[@alt='Edit'])[1]").click()
         #заполнение формы контакта
