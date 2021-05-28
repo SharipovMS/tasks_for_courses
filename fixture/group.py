@@ -71,3 +71,8 @@ class GroupHelper:
         #удалить группу
         wd.find_element_by_name("delete").click()
         self.check_page_group()
+
+    def count(self):
+        wd = self.app.wd
+        self.open_page_group()
+        return len(wd.find_elements_by_name("selected[]"))

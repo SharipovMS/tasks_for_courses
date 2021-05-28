@@ -1,7 +1,7 @@
 class class_for_test_create_contact:
 
-    def __init__(self, firstname, second_name, lastname, nickname, company, address, mobile, home, work,
-                           email, fax, email2, homepage, email3, bday, bmonth, byear, address2, dom, notes):
+    def __init__(self, firstname=None, second_name=None, lastname=None, nickname=None, company=None, address=None, mobile=None, home=None, work=None,
+                           email=None, fax=None, email2=None, homepage=None, email3=None, bday=None, bmonth=None, byear=None, address2=None, dom=None, notes=None):
         self.firstname = firstname
         self.second_name = second_name
         self.lastname = lastname
