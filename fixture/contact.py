@@ -13,7 +13,8 @@ class ContactHelper:
     def open_cont_page(self):
         # открытие главной страницы
         wd = self.app.wd
-        wd.get("https://localhost/addressbook/")
+        if not (wd.current_url.endswith("/addressbook/") and len(wd.find_elements_by_xpath("//input[@value='Send e-Mail']")) > 0):
+            wd.find_element_by_link_text("home").click()
 
     def change_field_value(self, field_name, text):
         wd = self.app.wd
