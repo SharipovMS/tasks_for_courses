@@ -12,8 +12,9 @@ class GroupHelper:
 
     def open_page_group(self):
         wd = self.app.wd
-        # Открытие страницы группы
-        wd.find_element_by_link_text("groups").click()
+        #проверка_требуется_ли_переход_по_ссылке
+        if not (wd.current_url.endswith("/group.php") and len(wd.find_elements_by_name("new")) > 0):
+            wd.find_element_by_link_text("groups").click()
 
     def check_page_group(self):
         wd = self.app.wd
