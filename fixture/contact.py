@@ -66,6 +66,7 @@ class ContactHelper:
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
+        self.open_cont_page()
 
     def count(self):
         wd = self.app.wd
@@ -89,5 +90,5 @@ class ContactHelper:
         for element in wd.find_elements_by_css_selector("tr[name=entry]"): #цикл в котором ищутся все элементы среди
             text = element.text #текс
             id = element.find_element_by_name("selected[]").get_attribute("value") #значения валуе
-            contacts.append(class_for_test_create_contact(name=text, id=id))
+            contacts.append(class_for_test_create_contact(firstname=text, id=id))
         return contacts
