@@ -1,4 +1,5 @@
 from selenium.webdriver.support.select import Select
+from model.test_create_contact_class import class_for_test_create_contact
 
 class ContactHelper:
 
@@ -80,3 +81,13 @@ class ContactHelper:
         self.fill_contact_form(test_create_contact_class)
         #обновление
         wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
+
+    def get_contact_list(self):
+        wd = self.app.wd
+        self.open_cont_page()
+        contacts = [] #подготовили_список
+        for element in wd.find_elements_by_css_selector("tr[name=entry]"): #цикл в котором ищутся все элементы среди
+            text = element.text #текс
+            id = element.find_element_by_name("selected[]").get_attribute("value") #значения валуе
+            contacts.append(class_for_test_create_contact(name=text, id=id))
+        return contacts
