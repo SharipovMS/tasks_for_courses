@@ -59,6 +59,7 @@ class ContactHelper:
         self.open_edit_page()
         self.fill_contact_form(test_create_contact_class)
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+        self.cont_cache = None
 
     def delete_first_contact(self):
         wd = self.app.wd
@@ -67,6 +68,7 @@ class ContactHelper:
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
         self.open_cont_page()
+        self.cont_cache = None
 
     def count(self):
         wd = self.app.wd
@@ -82,13 +84,17 @@ class ContactHelper:
         self.fill_contact_form(test_create_contact_class)
         #обновление
         wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
+        self.cont_cache = None
+
+    cont_cache = None
 
     def get_contact_list(self):
-        wd = self.app.wd
-        self.open_cont_page()
-        contacts = [] #подготовили_список
-        for element in wd.find_elements_by_css_selector("tr[name=entry]"): #цикл в котором ищутся все элементы среди
-            text = element.text #текс
-            id = element.find_element_by_name("selected[]").get_attribute("value") #значения валуе
-            contacts.append(class_for_test_create_contact(firstname=text, id=id))
-        return contacts
+        if self.cont_cache is None:
+            wd = self.app.wd
+            self.open_cont_page()
+            self.cont_cache = [] #подготовили_список
+            for element in wd.find_elements_by_css_selector("tr[name=entry]"): #цикл в котором ищутся все элементы среди
+                text = element.text #текст
+                id = element.find_element_by_name("selected[]").get_attribute("value") #значения валуе
+                self.cont_cache.append(class_for_test_create_contact(firstname=text, id=id))
+        return list(self.cont_cache)
