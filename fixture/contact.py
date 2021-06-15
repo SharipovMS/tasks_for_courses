@@ -61,10 +61,17 @@ class ContactHelper:
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
         self.cont_cache = None
 
+    def select_contact_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
     def delete_first_contact(self):
+        self.delete_contact_by_index(0)
+
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         self.open_cont_page()
-        wd.find_element_by_name("selected[]").click()
+        self.select_contact_by_index(index)
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
         self.open_cont_page()
@@ -75,15 +82,19 @@ class ContactHelper:
         self.open_cont_page()
         return len(wd.find_elements_by_name("selected[]"))
 
-    def modify_first_contact(self, test_create_contact_class):
+    def modify_first_contact(self):
+        self.modify_contact_by_index(0)
+
+    def modify_contact_by_index(self, index, test_create_contact_class):
         wd = self.app.wd
         self.open_cont_page()
-        wd.find_element_by_name("selected[]").click()
+        self.select_contact_by_index(index)
         wd.find_element_by_xpath("(//img[@alt='Edit'])[1]").click()
         #заполнение формы контакта
         self.fill_contact_form(test_create_contact_class)
         #обновление
-        wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
+        wd.find_element_by_name("update").click()
+        self.open_cont_page
         self.cont_cache = None
 
     cont_cache = None
