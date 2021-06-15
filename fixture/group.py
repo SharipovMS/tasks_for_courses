@@ -50,11 +50,14 @@ class GroupHelper:
         self.check_page_group()
         self.group_cache = None
 
-    # Изменение первой группы
-    def mod_first_group(self, new_group_data):
+    def modify_first_group(self, new_group_data):
+        self.modify_group_by_index(0)
+
+    # Изменение случайной группы
+    def modify_group_by_index(self, index, new_group_data):
         wd = self.app.wd
         self.open_page_group()
-        self.select_first_group()
+        self.select_group_by_index(index)
         #открыть форму редактирования
         wd.find_element_by_name("edit").click()
         #заполненеи форм группы
@@ -64,13 +67,18 @@ class GroupHelper:
         self.check_page_group()
         self.group_cache = None
 
+    def select_group_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+    def delete_first_group(self):
+        self.delete_group_by_index(0)
 
     #Удаление первой группы
-    def delete_first_group(self):
+    def delete_group_by_index(self, index):
         wd = self.app.wd
         self.open_page_group()
-        #выбрать первую группу
-        wd.find_element_by_name("selected[]").click()
+        self.select_group_by_index(index)
         #удалить группу
         wd.find_element_by_name("delete").click()
         self.check_page_group()
