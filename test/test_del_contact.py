@@ -1,9 +1,9 @@
-from model.test_create_contact_class import class_for_test_create_contact
+from model.contact import Contact
 from random import randrange
 
 def test_delete_some_contact(app): #тестовый метод
     if app.contact.count() == 0:
-        app.contact.create((class_for_test_create_contact(firstname="Marat")))
+        app.contact.create((Contact(firstname="Marat")))
     old_contacts = app.contact.get_contact_list()
     index = randrange(len(old_contacts))
     app.contact.delete_contact_by_index(index)
