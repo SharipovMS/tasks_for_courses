@@ -94,7 +94,7 @@ class ContactHelper:
             self.open_cont_page()
             self.cont_cache = [] #подготовили_список
             for element in wd.find_elements_by_css_selector("tr[name=entry]"): #цикл в котором ищутся все элементы среди
-                text = element.text #текст
+                firstname = element.text #текст
                 id = element.find_element_by_name("selected[]").get_attribute("value") #значения валуе
-                self.cont_cache.append(class_for_test_create_contact(firstname=text, id=id))
+                self.cont_cache.append(class_for_test_create_contact(firstname=firstname, id=id))
         return list(self.cont_cache)
