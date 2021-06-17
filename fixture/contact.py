@@ -90,7 +90,7 @@ class ContactHelper:
         wd = self.app.wd
         self.open_cont_page()
         self.select_contact_by_index(index)
-        wd.find_element_by_xpath("(//img[@alt='Edit'])[1]").click()
+        wd.find_element_by_xpath("(//img[@alt='Edit'])")[index].click()
         #заполнение формы контакта
         self.fill_contact_form(test_create_contact_class)
         #обновление
