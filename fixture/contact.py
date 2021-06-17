@@ -109,7 +109,6 @@ class ContactHelper:
                 cells = row.find_elements_by_tag_name("td")
                 lastname = cells[1].text
                 firstname = cells[2].text
-                print(firstname)
                 address = cells[3].text
                 id = cells[0].find_element_by_name("selected[]").get_attribute("value")
                 all_phones = cells[5].text
@@ -141,7 +140,7 @@ class ContactHelper:
         workphone = wd.find_element_by_name("work").get_attribute("value")
         mobilephone = wd.find_element_by_name("mobile").get_attribute("value")
         secondaryphone = wd.find_element_by_name("phone2").get_attribute("value")
-        return Contact(firstname=firstname, lastname=lastname, id=id, homephone=homephone, workphone=workphone, mobilephone=mobilephone, secondaryphone=secondaryphone)
+        return Contact(firstname=firstname, lastname=lastname, id=id,  workphone=workphone, homephone=homephone, mobilephone=mobilephone, secondaryphone=secondaryphone)
 
     def get_from_view_page(self, index):
         wd = self.app.wd
