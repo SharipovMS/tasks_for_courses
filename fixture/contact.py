@@ -109,11 +109,12 @@ class ContactHelper:
                 cells = row.find_elements_by_tag_name("td")
                 lastname = cells[1].text
                 firstname = cells[2].text
+                print(firstname)
                 address = cells[3].text
                 id = cells[0].find_element_by_name("selected[]").get_attribute("value")
                 all_phones = cells[5].text
                 all_emails = cells[4].text
-                self.cont_cache.append(Contact(firstname=firstname, lastname=lastname, address=address, id=id, all_phones=all_phones, all_emails=all_emails))
+                self.cont_cache.append(Contact(firstname=firstname, lastname=lastname, address=address, id=id, all_phones=all_phones, all_phones_from_home_page=all_phones, all_emails=all_emails))
         return list(self.cont_cache)
 
     def open_contact_to_edit_by_index(self, index):
