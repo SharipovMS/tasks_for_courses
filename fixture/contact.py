@@ -95,7 +95,7 @@ class ContactHelper:
         self.fill_contact_form(test_create_contact_class)
         #обновление
         wd.find_element_by_name("update").click()
-        self.open_cont_page
+        self.open_cont_page()
         self.cont_cache = None
 
     cont_cache = None
@@ -107,8 +107,8 @@ class ContactHelper:
             self.cont_cache = [] #подготовили_список
             for row in wd.find_elements_by_name("entry"):
                 cells = row.find_elements_by_tag_name("td")
-                firstname = cells[1].text
-                lastname = cells[2].text
+                lastname = cells[1].text
+                firstname = cells[2].text
                 address = cells[3].text
                 id = cells[0].find_element_by_name("selected[]").get_attribute("value")
                 all_phones = cells[5].text
