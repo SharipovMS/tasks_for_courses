@@ -2,7 +2,7 @@ from sys import maxsize
 
 class Contact:
 
-    def __init__(self, addresswork=None, all_phones_from_home_page=None, firstname=None, second_name=None, lastname=None, nickname=None, company=None, address=None, mobile=None, home=None, work=None, middlname=None,
+    def __init__(self, all_emails_from_home_page=None, addresswork=None, all_phones_from_home_page=None, firstname=None, second_name=None, lastname=None, nickname=None, company=None, address=None, mobile=None, home=None, work=None, middlname=None,
                            email=None, fax=None, email2=None, homepage=None, email3=None, bday=None, bmonth=None, byear=None, address2=None, dom=None, notes=None, id=None, name=None, mobilephone=None, workphone=None, secondaryphone = None, homephone = None, all_phones = None, all_emails = None):
         self.firstname = firstname
         self.second_name = second_name
@@ -35,9 +35,10 @@ class Contact:
         self.all_phones_from_home_page = all_phones_from_home_page
         self.middlname = middlname
         self.addresswork = addresswork
+        self.all_emails_from_home_page = all_emails_from_home_page
 
     def __repr__(self):
-        return "%s:%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s" % (self.all_phones_from_home_page, self.all_emails, self.all_phones, self.homephone,
+        return "%s:%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s" % (self.all_emails_from_home_page, self.all_phones_from_home_page, self.all_emails, self.all_phones, self.homephone,
                                                                                                      self.mobilephone, self.workphone, self.secondaryphone, self.id, self.firstname,
                                                                                                      self.second_name, self.lastname, self.company, self.addresswork, self.homephone,
                                                                                                      self.mobilephone, self.workphone, self.secondaryphone, self.email, self.email2,
