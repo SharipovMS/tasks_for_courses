@@ -4,7 +4,7 @@ from fixture.contact import ContactHelper
 from fixture.group import GroupHelper
 
 class Application:
-    def __init__(self, browser="firefox"): #Запуск браузера
+    def __init__(self, browser, base_url): #Запуск браузера
         if browser == "firefox":
             self.wd = webdriver.Firefox()
         elif browser == "chrome":
@@ -16,6 +16,7 @@ class Application:
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
         self.contact = ContactHelper(self)
+        self.base_url=base_url
 
     def open_page_add_new(self):
         # Открывает страницу
@@ -25,7 +26,7 @@ class Application:
     def open_page(self):
         # Открывает страницу
         wd = self.wd
-        wd.get("http://localhost/addressbook/")
+        wd.get(self.base_url)
 
     def destroy(self):
         self.wd.quit()
