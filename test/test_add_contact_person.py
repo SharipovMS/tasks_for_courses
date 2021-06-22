@@ -8,9 +8,13 @@ def random_string(prefix, maxlen):
     symbols = string.ascii_letters + string.digits + " "*10
     return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
 
+def random_email(prefix, maxlen):
+    symbols = string.ascii_letters + string.digits + ""*10
+    return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
+
 testdata = [Contact(firstname=random_string("firstname",20), second_name=random_string("second_name",20), lastname=random_string("lastname",20),
                       nickname=random_string("nickname",20), company=random_string("company",20), address=random_string("address",20),
-                      mobile=random_string("mobile",20), email=random_string("email",20), bday="16",
+                      mobile=random_string("mobile",20), email=random_email("email",20), bday="16",
                       bmonth="January", byear="1994", address2=random_string("address2",20), notes=random_string("notes",20))
     for i in range(5)]
 
