@@ -10,18 +10,18 @@ class Application:
         elif browser == "chrome":
             self.wd = webdriver.Chrome()
         elif browser == "ie":
-            self.wd == webdriver.Ie()
+            self.wd = webdriver.Ie()
         else:
             raise ValueError("Unrecognized browser %s" % browser)
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
         self.contact = ContactHelper(self)
-        self.base_url=base_url
+        self.base_url = base_url
 
     def open_page_add_new(self):
         # Открывает страницу
         wd = self.wd
-        wd.get("https://localhost/addressbook/edit.php")
+        wd.get(self.base_url)
 
     def open_page(self):
         # Открывает страницу

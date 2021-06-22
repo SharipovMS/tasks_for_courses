@@ -5,11 +5,6 @@ class GroupHelper:
     def __init__(self, app):
         self.app = app
 
-    def open_home_page(self):
-        # открытие главной страницы
-        wd = self.app.wd
-        wd.get("https://localhost/addressbook/")
-
     def open_page_group(self):
         wd = self.app.wd
         #проверка_требуется_ли_переход_по_ссылке
